@@ -6,15 +6,22 @@
 </head>
 <body>
 
+    <div class="container">
     <h1>🍳 Recipe Recommender</h1>
 
-    <input type="text" id="ingredientInput" placeholder="Enter ingredient (e.g. chicken)">
-    <button onclick="searchRecipes()">Search</button>
+    <div class="search-box">
+      <input type="text" id="ingredientInput" placeholder="Enter ingredient">
+      <button onclick="searchRecipes()">🔍 Search</button>
+    </div>
+
+    <div id="loading" class="loading">Loading recipes...</div>
 
     <div id="recipes"></div>
-
     <div id="recipeDetails"></div>
 
+    <footer>Web Development Project</footer>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
