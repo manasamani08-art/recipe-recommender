@@ -1,27 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipe Recommender</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="container">
+<div class="container">
+
+    <!-- 🌙 Dark Mode Toggle -->
+    <label class="dark-toggle">
+        <input type="checkbox" id="darkModeToggle">
+        🌙 Dark Mode
+    </label>
+
     <h1>🍳 Recipe Recommender</h1>
 
+    <!-- 🔍 Search Section -->
     <div class="search-box">
-      <input type="text" id="ingredientInput" placeholder="Enter ingredient">
-      <button onclick="searchRecipes()">🔍 Search</button>
+        <input 
+            type="text" 
+            id="ingredientInput" 
+            placeholder="Enter ingredients (e.g. egg, rice, chicken)"
+        >
+
+        <!-- Toggle -->
+        <label class="toggle">
+            <input type="checkbox" id="modeToggle">
+            <span>Smart Match</span>
+        </label>
+
+        <select id="vegFilter">
+            <option value="all">All</option>
+            <option value="veg">Vegetarian</option>
+            <option value="nonveg">Non-Vegetarian</option>
+        </select>
+
+        <button onclick="searchRecipes()">🔍 Search</button>
     </div>
 
-    <div id="loading" class="loading">Loading recipes...</div>
+    <!-- 🍽️ Recipes Grid -->
+    <div id="recipes" class="recipes-container"></div>
 
-    <div id="recipes"></div>
-    <div id="recipeDetails"></div>
+    <!-- 📖 Recipe Details -->
+    <div id="recipeDetails" class="recipe-details"></div>
 
-    <footer>Web Development Project</footer>
-    </div>
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer style="text-align:center; margin-top:20px; font-size:14px; color:#777;">
+        Web Development Project
+    </footer>
+
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
 </body>
-
 </html>
